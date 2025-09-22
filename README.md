@@ -3,7 +3,7 @@
 A modern, responsive cryptocurrency dashboard built with React and Tailwind CSS that provides real-time market data, highlights, and detailed coin information using the CoinGecko API.
 
 **#Live URL**
-([url](https://medibuddy-xgxa.onrender.com))
+([cryptodashboard](https://medibuddy-xgxa.onrender.com))
 
 ## ✨ Features
 
