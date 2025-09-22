@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import HighlightsSection from './components/HighlightsSection/HighlightsSection';
 import CoinTable from './components/CoinTable/CoinTable';
 import CoinDetailModal from './components/CoinDetailModal/CoinDetailModal';
-import { FaHeart } from "react-icons/fa";
 
 const Header = () => (
   <header className="bg-white shadow-sm border-b border-gray-200">

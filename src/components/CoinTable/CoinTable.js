@@ -146,7 +146,7 @@ const CoinTable = ({ onCoinClick }) => {
 
   useEffect(() => {
     fetchCoins(1, sortOrder);
-  }, []); 
+  }, [sortOrder]); 
 
   useEffect(() => {
     debouncedSearch(searchQuery);
