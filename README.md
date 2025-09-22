@@ -2,6 +2,9 @@
 
 A modern, responsive cryptocurrency dashboard built with React and Tailwind CSS that provides real-time market data, highlights, and detailed coin information using the CoinGecko API.
 
+**#Live URL**
+([url](https://medibuddy-xgxa.onrender.com))
+
 ## ✨ Features
 
 ### 🎯 Core Features
@@ -32,13 +35,6 @@ A modern, responsive cryptocurrency dashboard built with React and Tailwind CSS 
 - **React 18**: Modern functional components with hooks
 - **JavaScript ES6+**: Modern JavaScript features
 - **Tailwind CSS**: Utility-first CSS framework
-- **Axios**: HTTP client for API requests
-
-### **Architecture Patterns**
-- **Service Layer**: Abstracted API service classes
-- **Adapter Pattern**: Clean API response transformation
-- **Factory Pattern**: Service instantiation
-- **Cache Pattern**: In-memory caching with TTL
 
 ## 🚀 Quick Start
 
@@ -99,43 +95,6 @@ src/
 └── App.js             # Main application component
 ```
 
-## 🔧 Design Patterns Used
-
-### **Service Layer Pattern**
-Clean separation between UI and business logic
-```javascript
-const coinGeckoService = createCoinGeckoService();
-const coins = await coinGeckoService.getCoinsMarkets();
-```
-
-### **Adapter Pattern**
-Transform API responses to clean domain models
-```javascript
-export const adaptCoinFromApi = (apiCoin) => ({
-  id: apiCoin.id,
-  currentPrice: apiCoin.current_price,
-  // ... clean domain model
-});
-```
-
-### **Factory Pattern**
-Service creation with dependency injection
-```javascript
-export const createCoinGeckoService = () => {
-  const httpClient = createHttpClient();
-  const cache = createCacheService();
-  // ...
-};
-```
-
-### **Cache Pattern**
-TTL-based caching with automatic cleanup
-```javascript
-const cachedData = cache.get(cacheKey);
-if (cachedData) return cachedData;
-cache.set(cacheKey, data, ttl);
-```
-
 ## 🌐 API Integration
 
 Uses CoinGecko API v3 with the following endpoints:
@@ -145,33 +104,8 @@ Uses CoinGecko API v3 with the following endpoints:
 
 **Rate Limiting**: Implements caching and error handling for API limits
 
-## 🎨 Styling & Responsiveness
 
-Built with **Tailwind CSS** for:
-- **Mobile-first**: Responsive design across all devices
-- **Consistent Design**: Unified color scheme and spacing
-- **Performance**: Optimized CSS bundle size
-- **Maintainability**: Utility classes for rapid development
 
-## 🚀 Deployment
-
-### **Vercel (Recommended)**
-```bash
-npm install -g vercel
-vercel
-```
-
-### **Netlify**
-```bash
-npm run build
-# Upload build folder to Netlify
-```
-
-### **Manual Deployment**
-```bash
-npm run build
-# Deploy contents of build/ folder to your hosting provider
-```
 
 ## 🔮 Future Enhancements
 
@@ -192,26 +126,5 @@ npm run build
 
 **Styling Issues**: Verify Tailwind CSS is properly configured in `tailwind.config.js`
 
-## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- **CoinGecko** for providing comprehensive cryptocurrency API
-- **Tailwind CSS** for the excellent utility-first framework
-- **React Team** for the amazing library and documentation
-
----
-
-**Built with ❤️ using React and CoinGecko API**
-
-*Data provided by CoinGecko • Updated every minute*
